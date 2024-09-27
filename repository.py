@@ -32,9 +32,9 @@ class UserRepository:
         else:
             data = []  
 
-        # Append the new user data
+     
         data.append(user_data.to_dict())
 
-        # Write the updated list back to the file
+     
         with open('user_data.json', 'w') as json_file:
             json.dump(data, json_file, indent=4)
