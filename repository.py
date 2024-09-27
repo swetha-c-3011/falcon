@@ -26,11 +26,11 @@ class UserRepository:
         if os.path.exists('user_data.json'):
             with open('user_data.json', 'r') as json_file:
                 try:
-                    data = json.load(json_file)  # Load existing list
+                    data = json.load(json_file)  
                 except json.JSONDecodeError:
-                    data = []  # File exists but is empty or corrupted
+                    data = []  
         else:
-            data = []  # File does not exist yet
+            data = []  
 
         # Append the new user data
         data.append(user_data.to_dict())
