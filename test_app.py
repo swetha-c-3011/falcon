@@ -7,17 +7,17 @@ from resource import UserResource
 
 class TestUserResource(testing.TestCase):
     def setUp(self):
-        # Mock the UserRepository
+       
         self.user_repository = MagicMock()
 
-        # Create an instance of UserResource with the mocked repository
+      
         self.user_resource = UserResource(self.user_repository)
 
-        # Create a Falcon app and add the route
+       
         self.app = falcon.App()
         self.app.add_route('/users', self.user_resource)
 
-        # Use the testing client for the app
+        
         self.client = testing.TestClient(self.app)
 
     def test_create_user_success(self):
